@@ -56,7 +56,7 @@ func uploadDirectoryToS3(s *session.Session, dirname string) error {
 		}
 	}
 
-	// Wait for all HTTP fetches to complete.
+	// Wait for all files uploading -> s3 to  complete.
 	if err1 = g.Wait(); err1 == nil {
 		fmt.Println("Successfully uploaded all files")
 		return nil
