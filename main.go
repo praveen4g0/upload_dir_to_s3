@@ -43,7 +43,7 @@ func main() {
 }
 
 func uploadDirectoryToS3(s *session.Session, dirname string) error {
-	g, ctx := errgroup.WithContext(context.Background())
+	g, _ := errgroup.WithContext(context.Background())
 	var err1 error
 	files, err := ioutil.ReadDir(dirname)
 	if err != nil {
